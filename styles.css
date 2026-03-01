@@ -1,0 +1,166 @@
+/* =============================
+   GLOBAL RESET & TYPO
+============================= */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+    background: linear-gradient(135deg, #0f172a, #1e293b);
+    color: #f1f5f9;
+    display: flex;
+    justify-content: center;
+    padding: 60px 20px;
+}
+
+main {
+    width: 100%;
+    max-width: 1100px;
+}
+
+h1 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+    letter-spacing: 1px;
+    background: linear-gradient(90deg, #38bdf8, #a78bfa);
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+/* =============================
+   TABLE BASE
+============================= */
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(12px);
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+thead {
+    background: rgba(255, 255, 255, 0.08);
+}
+
+th, td {
+    padding: 18px 20px;
+    text-align: left;
+}
+
+th {
+    font-weight: 600;
+    font-size: 0.9rem;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    color: #94a3b8;
+}
+
+tbody tr {
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+tbody tr:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.35);
+}
+
+/* =============================
+   ROW BACKGROUNDS (TEST REQUIRED)
+============================= */
+
+tr[class="read"] {
+    background-image: linear-gradient(90deg, #0f766e, #14b8a6);
+}
+
+tr[class="to-read"] {
+    background-image: linear-gradient(90deg, #7c2d12, #dc2626);
+}
+
+tr[class="in-progress"] {
+    background-image: linear-gradient(90deg, #854d0e, #f59e0b);
+}
+
+/* =============================
+   SPAN BASE (TEST REQUIRED)
+============================= */
+
+span {
+    display: inline-block;
+}
+
+span[class="status"],
+span[class^="rate"] {
+    height: 32px;
+    width: auto;
+    min-width: 110px;
+    padding: 6px 10px;
+    text-align: center;
+    border-radius: 999px;
+    font-size: 0.8rem;
+    font-weight: 600;
+}
+
+/* =============================
+   STATUS STYLE (TEST REQUIRED)
+============================= */
+
+tr[class="read"] span[class="status"] {
+    border: 1px solid #10b981;
+    background-image: linear-gradient(90deg, #10b981, #34d399);
+    color: #052e16;
+}
+
+tr[class="to-read"] span[class="status"] {
+    border: 1px solid #ef4444;
+    background-image: linear-gradient(90deg, #ef4444, #f87171);
+    color: #3f0f0f;
+}
+
+tr[class="in-progress"] span[class="status"] {
+    border: 1px solid #f59e0b;
+    background-image: linear-gradient(90deg, #f59e0b, #facc15);
+    color: #3f2d0f;
+}
+
+/* =============================
+   RATE BOXES (TEST REQUIRED DIRECT CHILD)
+============================= */
+
+span[class^="rate"] > span {
+    border: 1px solid rgba(255,255,255,0.4);
+    border-radius: 4px;
+    margin: 0 3px;
+    height: 16px;
+    width: 16px;
+    background-color: rgba(255,255,255,0.15);
+}
+
+/* =============================
+   ONE (TEST REQUIRED)
+============================= */
+
+span[class~="one"] span:first-child {
+    background-image: linear-gradient(45deg, #facc15, #f97316);
+}
+
+/* =============================
+   TWO (TEST REQUIRED)
+============================= */
+
+span[class~="two"] span:nth-child(-n+2) {
+    background-image: linear-gradient(45deg, #facc15, #f97316);
+}
+
+/* =============================
+   THREE (TEST REQUIRED)
+============================= */
+
+span[class~="three"] span {
+    background-image: linear-gradient(45deg, #facc15, #f97316);
+}
